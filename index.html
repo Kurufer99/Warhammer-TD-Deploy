@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warhammer Tower Defense</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(45deg, #ff0047, #2c34fc, #00d4ff, #ff0047);
+      background-size: 600% 600%;
+      animation: gradientBG 16s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 3rem;
+      text-align: center;
+      transform: translateY(-50px);
+      opacity: 0;
+      animation:
+        slideIn 1s forwards,
+        glow 2s infinite alternate 1s;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+      to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Warhammer TD</h1>
+</body>
+</html>
